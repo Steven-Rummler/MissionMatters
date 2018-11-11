@@ -56,7 +56,7 @@ namespace MissionForum.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "About us!";
 
             return View();
         }
