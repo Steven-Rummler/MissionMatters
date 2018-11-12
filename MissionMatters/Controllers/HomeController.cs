@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MissionMatters.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,12 +9,27 @@ namespace MissionForum.Controllers
 {
     public class HomeController : Controller
     {
+        public static List<Question> Korea = new List<Question>();
+
+        public static List<Question> Canada = new List<Question>();
+
+        public static List<Question> Texas = new List<Question>();
+
         public ActionResult Index()
         {
+            if (Korea.Count == 0)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    Korea.Add(new Question());
+                    Canada.Add(new Question());
+                    Texas.Add(new Question());
+                }
+            }
             return View();
         }
 
-        public ActionResult MissionList()
+        public ActionResult Missions()
         {
             return View();
         }
@@ -27,7 +43,7 @@ namespace MissionForum.Controllers
             ViewBag.climate = "Subtropical";
             ViewBag.dominate = "Atheist";
             ViewBag.flag = "/Content/Images/korea.png";
-            return View("Mission");
+            return View("Mission", Korea);
         }
 
         public ActionResult Montreal()
@@ -39,7 +55,7 @@ namespace MissionForum.Controllers
             ViewBag.climate = "Continental";
             ViewBag.dominate = "Catholic";
             ViewBag.flag = "/Content/Images/quebec.png";
-            return View("Mission");
+            return View("Mission", Canada);
         }
 
         public ActionResult Lubbock()
@@ -51,7 +67,7 @@ namespace MissionForum.Controllers
             ViewBag.climate = "Semi-arid";
             ViewBag.dominate = "Baptist";
             ViewBag.flag = "/Content/Images/texas.png";
-            return View("Mission");
+            return View("Mission", Texas);
         }
 
         public ActionResult About()
