@@ -77,9 +77,11 @@ namespace MissionForum.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+
+
+        public ActionResult ContactForm()
         {
-            ViewBag.Message = "Your contact page.";
+           
 
             return View();
         }
