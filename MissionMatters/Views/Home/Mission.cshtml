@@ -29,45 +29,45 @@
 
 </div>
 
-<p>FAQ: How many missions are there? 419 <br /> How many missionaries are there? 70,000 <br />Can I bring my phone on my mission? Maybe</p>
-
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.QuestionText)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Answer)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+<div class="jumbotron">FAQ: How many missions are there? 419<br /><br />How many missionaries are there? 70,000<br /><br />Can I bring my phone on my mission? Maybe</div>
+<div class="jumbotron">
+    <table class="table">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.QuestionText)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Answer)
-            </td>
-            <td>
-                <button onclick="showForm()">Answer</button>
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.QuestionText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Answer)
+            </th>
+            <th></th>
         </tr>
-        <tr>
-            <td>
-                <form style="display:none" id="form" action=@Url.Action(ViewBag.Name, "Home") method="get">
-                    Answer:<br />
-                    <input type="text" name="answer" value=""><br />
-                    <input type="submit" value="Submit">
-                </form>
-            </td>
-        </tr>
-    }
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    Question
+                </td>
+                <td>
+                    Answer
+                </td>
+                <td>
+                    <button onclick="showForm()">Answer</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form style="display:none" id="form" action=@Url.Action(ViewBag.Name, "Home") method="get">
+                        Answer:<br />
+                        <input type="text" name="answer" value=""><br />
+                        <input type="submit" value="Submit">
+                    </form>
+                </td>
+            </tr>
+        }
 
+    </table>
+</div>
 <form action=@Url.Action(ViewBag.Name, "Home") method="get">
     Question:<br />
     <input type="text" name="question" value=""><br />
