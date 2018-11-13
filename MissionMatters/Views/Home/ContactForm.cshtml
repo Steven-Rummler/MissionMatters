@@ -4,12 +4,18 @@
     ViewBag.Title = "ContactForm";
 }
 
-<h2>ContactForm</h2>
-<br />
-<p>Feel free to contact us at info@missionmatters.com or 801-555-5555. You can also fill out the form below with any questions</p>
-<br />
-<br />
-
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href=@Url.Action("Index", "Home")>Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+    </ol>
+</nav>
+<div class="card">
+    <div class="card-body" style="background-color:lightgrey">
+        <p>Feel free to contact us at info@missionmatters.com or 801-555-5555. You can also fill out the form below with any questions</p>
+    </div>
+</div>
+<br/>
 <div class="jumbotron">
     @using (Html.BeginForm())
     {
