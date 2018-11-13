@@ -1,4 +1,8 @@
-﻿body {
+﻿/*Our custom CSS Page*/
+
+
+
+body {
     background-color: lightblue;
 }
 
@@ -10,13 +14,14 @@ img {
     border-bottom: 2px thin white;
 }
 
-.jumbotron
-{
-    background:white
+.jumbotron {
+    /*background: white;
+    color: white;*/
+    background-color: #f8f9fa;
 }
 
-.breadcrumb{
-    background: white
+.breadcrumb {
+    background: #f8f9fa;
 }
 
 .center {
