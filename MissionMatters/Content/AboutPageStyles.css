@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: aliceblue;
+    background-color: lightblue;
 }
 
 h3{
@@ -8,4 +8,13 @@ h3{
 
 img {
     border-bottom: 2px thin white;
+}
+
+.jumbotron
+{
+    background:white
+}
+
+.breadcrumb{
+    background: white
 }

@@ -164,6 +164,12 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\busan.jpg" />
+    <Content Include="Content\Images\contact.png" />
+    <Content Include="Content\Images\conversation.png" />
+    <Content Include="Content\Images\list.png" />
+    <Content Include="Content\Images\quebeccarousel.jpg" />
+    <Content Include="Content\Images\sanantonio.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -239,6 +245,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
