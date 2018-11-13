@@ -155,7 +155,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\AboutPageImages\ChurchLogo.jpeg" />
+    <Content Include="Content\AboutPageImages\ChristPicture.jpeg" />
     <Content Include="Content\AboutPageImages\MissionaryPic.jpeg" />
     <Content Include="Content\AboutPageImages\Temple.jpeg" />
     <Content Include="Content\AboutPageStyles.css" />
