@@ -29,53 +29,126 @@
 
 </div>
 
-<div class="jumbotron">FAQ: How many missions are there? 419<br /><br />How many missionaries are there? 70,000<br /><br />Can I bring my phone on my mission? Maybe</div>
 <div class="jumbotron">
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.QuestionText)
+                Question
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Answer)
+                Answer
             </th>
             <th></th>
         </tr>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    Question
-                </td>
-                <td>
-                    Answer
-                </td>
-                <td>
-                    <button onclick="showForm()">Answer</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <form style="display:none" id="form" action=@Url.Action(ViewBag.Name, "Home") method="get">
-                        Answer:<br />
-                        <input type="text" name="answer" value=""><br />
-                        <input type="submit" value="Submit">
-                    </form>
-                </td>
-            </tr>
-        }
+
+        <tr>
+            <td>How many missions are there?</td>
+            <td>
+                419
+            </td>
+            <td>
+                <button onclick="showForm()">Answer</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form style="display:none" id="form" action=@Url.Action(ViewBag.Name, "Home") method="get">
+                    Answer:<br />
+                    <input type="text" name="answer" value=""><br />
+                    <input type="submit" value="Submit">
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>>How many missionaries are there?</td>
+            <td>
+                65,000
+            </td>
+            <td>
+                <button onclick="showForm()">Answer</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form style="display:none" id="form" action=@Url.Action(ViewBag.Name, "Home") method="get">
+                    Answer:<br />
+                    <input type="text" name="answer" value=""><br />
+                    <input type="submit" value="Submit">
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Can I bring my phone on my mission?</td>
+            <td>
+                Maybe
+            </td>
+            <td>
+                <button onclick="showForm()">Answer</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form style="display:none" id="form" action=@Url.Action(ViewBag.Name, "Home") method="get">
+                    Answer:<br />
+                    <input type="text" name="answer" value=""><br />
+                    <input type="submit" value="Submit">
+                </form>
+            </td>
+        </tr>
+
 
     </table>
 </div>
-<form action=@Url.Action(ViewBag.Name, "Home") method="get">
-    Question:<br />
-    <input type="text" name="question" value=""><br />
-    <input type="submit" value="Submit">
-</form>
+    @*
+        <div class="jumbotron">
+            <table class="table">
+                <tr>
+                    <th>
+                        Question
+                    </th>
+                    <th>
+                        Answer
+                    </th>
+                    <th></th>
+                </tr>
 
-<script>
-    function showForm() {
-        document.getElementById('form').style.display = 'block';
-    }
-</script>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.QuestionText
+                        </td>
+                        <td>
+                            @item.Answer
+                        </td>
+                        <td>
+                            <button onclick="showForm()">Answer</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form style="display:none" id="form" action=@Url.Action(ViewBag.Name, "Home") method="get">
+                                Answer:<br />
+                                <input type="text" name="answer" value=""><br />
+                                <input type="submit" value="Submit">
+                            </form>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>*@
+    <form action=@Url.Action(ViewBag.Name, "Home") method="get">
+        Question:<br />
+        <input type="text" name="question" value=""><br />
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function showForm() {
+            document.getElementById('form').style.display = 'block';
+        }
+    </script>
