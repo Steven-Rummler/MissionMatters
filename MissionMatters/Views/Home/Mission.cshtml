@@ -48,12 +48,12 @@
                 419
             </td>
             <td>
-                <button onclick="showForm()">Answer</button>
+                <button onclick="showForm1()">Answer</button>
             </td>
         </tr>
         <tr>
             <td>
-                <form style="display:none" id="form" action=@Url.Action(ViewBag.Name, "Home") method="get">
+                <form style="display:none" id="form1" action=@Url.Action(ViewBag.Name, "Home") method="get">
                     Answer:<br />
                     <input type="text" name="answer" value=""><br />
                     <input type="submit" value="Submit">
@@ -67,12 +67,12 @@
                 65,000
             </td>
             <td>
-                <button onclick="showForm()">Answer</button>
+                <button onclick="showForm2()">Answer</button>
             </td>
         </tr>
         <tr>
             <td>
-                <form style="display:none" id="form" action=@Url.Action(ViewBag.Name, "Home") method="get">
+                <form style="display:none" id="form2" action=@Url.Action(ViewBag.Name, "Home") method="get">
                     Answer:<br />
                     <input type="text" name="answer" value=""><br />
                     <input type="submit" value="Submit">
@@ -86,12 +86,12 @@
                 Maybe
             </td>
             <td>
-                <button onclick="showForm()">Answer</button>
+                <button onclick="showForm3()">Answer</button>
             </td>
         </tr>
         <tr>
             <td>
-                <form style="display:none" id="form" action=@Url.Action(ViewBag.Name, "Home") method="get">
+                <form style="display:none" id="form3" action=@Url.Action(ViewBag.Name, "Home") method="get">
                     Answer:<br />
                     <input type="text" name="answer" value=""><br />
                     <input type="submit" value="Submit">
@@ -102,53 +102,65 @@
 
     </table>
 </div>
-    @*
-        <div class="jumbotron">
-            <table class="table">
+@*
+    <div class="jumbotron">
+        <table class="table">
+            <tr>
+                <th>
+                    Question
+                </th>
+                <th>
+                    Answer
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
                 <tr>
-                    <th>
-                        Question
-                    </th>
-                    <th>
-                        Answer
-                    </th>
-                    <th></th>
+                    <td>
+                        @item.QuestionText
+                    </td>
+                    <td>
+                        @item.Answer
+                    </td>
+                    <td>
+                        <button onclick="showForm()">Answer</button>
+                    </td>
                 </tr>
+                <tr>
+                    <td>
+                        <form style="display:none" id="form" action=@Url.Action(ViewBag.Name, "Home") method="get">
+                            Answer:<br />
+                            <input type="text" name="answer" value=""><br />
+                            <input type="submit" value="Submit">
+                        </form>
+                    </td>
+                </tr>
+            }
 
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @item.QuestionText
-                        </td>
-                        <td>
-                            @item.Answer
-                        </td>
-                        <td>
-                            <button onclick="showForm()">Answer</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <form style="display:none" id="form" action=@Url.Action(ViewBag.Name, "Home") method="get">
-                                Answer:<br />
-                                <input type="text" name="answer" value=""><br />
-                                <input type="submit" value="Submit">
-                            </form>
-                        </td>
-                    </tr>
-                }
+        </table>
+    </div>*@
+<form action=@Url.Action(ViewBag.Name, "Home") method="get">
+    Question:<br />
+    <input type="text" name="question" value=""><br />
+    <input type="submit" value="Submit">
+</form>
 
-            </table>
-        </div>*@
-    <form action=@Url.Action(ViewBag.Name, "Home") method="get">
-        Question:<br />
-        <input type="text" name="question" value=""><br />
-        <input type="submit" value="Submit">
-    </form>
+<script>
+    function showForm1() {
+        document.getElementById('form1').style.display = 'block';
+    }
+</script>
 
-    <script>
-        function showForm() {
-            document.getElementById('form').style.display = 'block';
-        }
-    </script>
+<script>
+    function showForm2() {
+        document.getElementById('form2').style.display = 'block';
+    }
+</script>
+
+<script>
+    function showForm3() {
+        document.getElementById('form3').style.display = 'block';
+    }
+</script>
